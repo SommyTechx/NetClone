@@ -76,7 +76,7 @@ const Navbar = () => {
       } z-50 transition-all duration-300`}
     >
       {/* Top bar for mobile */}
-      <div className="flex justify-between items-center w-full ">
+      <div className="flex justify-between items-center w-full md:hidden">
         <img
           src={logo}
           alt="Netflix Logo"

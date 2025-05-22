@@ -37,11 +37,11 @@ const Player = () => {
             <img
               src={back_arrow_icon}
               alt="arrow"
-              className="lg:w-[50px] sm:w-[25px] cursor-pointer hover:scale-105 transition-transform duration-200"
+              className="w-12 sm:w-12 md:w-10 lg:w-12 cursor-pointer hover:scale-105 transition-transform duration-200"
             />
           </Link>
         </div>
-        <div className="w-full h-[80vh] flex justify-center">
+        <div className="w-full max-w-6xl aspect-video ">
           <iframe
             className="rounded-[10px] w-full h-full"
             src={`https://www.youtube.com/embed/${moviedetail.key}?autoplay=1&controls=1&rel=0`}
@@ -52,7 +52,7 @@ const Player = () => {
           ></iframe>
         </div>
 
-        <div className="flex items-center justify-between w-[90%] mt-1 text-white lg:text-[1.8rem] sm:text-[1.4rem]">
+        <div className="flex items-center justify-between w-[90%] mt-1 text-white lg:text-[1.8rem] sm:text-[1.4rem]sm:flex-col md:flex-row md:gap-4 lg:gap-8">
           <p>{moviedetail.published_at.slice(0, 10)}</p>
           <p>{moviedetail.name}</p>
           <p>{moviedetail.typeof}</p>
