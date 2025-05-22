@@ -69,18 +69,18 @@ const Navbar = () => {
   return (
     <header
       ref={navRef}
-      className={`w-full flex flex-col md:flex-row justify-between py-4 md:py-[2rem] px-4 md:px-8 fixed text-sm md:text-[1.4rem] text-[#e5e5e5] ${
+      className={`w-full flex flex-col md:flex-row justify-between py-8 md:py-[2rem] px-12 md:px-8 fixed text-sm md:text-[1.4rem] text-[#e5e5e5] ${
         isScrolled
           ? "bg-black/80"
           : "bg-gradient-to-t from-[rgba(0,0,0,0.7)_10%] to-transparent"
       } z-50 transition-all duration-300`}
     >
       {/* Top bar for mobile */}
-      <div className="flex justify-between items-center w-full md:hidden">
+      <div className="flex justify-between items-center w-full ">
         <img
           src={logo}
           alt="Netflix Logo"
-          className="w-24 md:w-[9rem] cursor-pointer"
+          className="w-24 md:w-[9rem] sm:w-[6rem] cursor-pointer"
           onClick={() => navigate("/")}
         />
 
@@ -120,7 +120,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-black/90 w-full py-4 px-4">
+        <div className="md:hidden bg-black/90 w-full  py-4 px-4 ">
           <ul className="flex flex-col gap-4">
             {navItems.map((item) => (
               <li
